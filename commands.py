@@ -56,5 +56,50 @@ def execute_command(command):
     elif command == "maximize window":
         pyautogui.hotkey('win', 'up')
         messagebox.showinfo("Voice Command", "Window Maximized")
+    elif command == "open calculator":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('calc')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Calculator Opened")
+    elif command == "open task manager":
+        pyautogui.hotkey('ctrl', 'shift', 'esc')
+        messagebox.showinfo("Voice Command", "Task Manager Opened")
+    elif command == "open file explorer":
+        pyautogui.hotkey('win', 'e')
+        messagebox.showinfo("Voice Command", "File Explorer Opened")
+    elif command == "open settings":
+        pyautogui.hotkey('win', 'i')
+        messagebox.showinfo("Voice Command", "Settings Opened")
+    elif command == "switch window":
+        pyautogui.hotkey('alt', 'tab')
+        messagebox.showinfo("Voice Command", "Switched Window")
+    elif command == "open command prompt":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('cmd')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Command Prompt Opened")
+    elif command == "open control panel":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('control')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Control Panel Opened")
+    elif command == "refresh desktop":
+        pyautogui.hotkey('f5')
+        messagebox.showinfo("Voice Command", "Desktop Refreshed")
+    elif command == "open downloads folder":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('%USERPROFILE%\\Downloads')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Downloads Folder Opened")
+    elif command == "open documents folder":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('%USERPROFILE%\\Documents')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Documents Folder Opened")
+    elif command == "open pictures folder":
+        pyautogui.hotkey('win', 'r')
+        pyautogui.write('%USERPROFILE%\\Pictures')
+        pyautogui.press('enter')
+        messagebox.showinfo("Voice Command", "Pictures Folder Opened")
     else:
         messagebox.showinfo("Unknown Command", f"Command not recognized: {command}")
